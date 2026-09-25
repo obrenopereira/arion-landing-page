@@ -13,3 +13,17 @@
 @media(max-width:800px){h2,.about h2{font-size:44px}.about,.business,.comparison,.how,.footer{padding:72px 0;min-height:0}.about p{font-size:20px}.about-title img{width:80px;height:auto}.route-section{min-height:0}.route-card{min-height:560px;background-position:35% center}.route-card>div{max-width:420px;background:#01162466;border-radius:12px;padding:24px}.photo-strip{height:480px}.photo-track>img{height:360px;width:250px}.services{min-height:0}.service{grid-column:span 6}.fleet{min-height:0}.fleet-stage{gap:12px}.fleet-car{height:290px}.comparison-grid{grid-template-columns:1fr 1fr;gap:20px}.versus{display:none}.comparison-content{margin:0}.business-grid{grid-template-columns:1fr}.business-copy{max-width:600px}.business-copy p{margin-bottom:32px}.mosaic{min-height:0}.mosaic img{height:220px}.how-person{left:40%;opacity:.25}.steps{width:75%;max-width:none}.footer h2{font-size:60px}.section-title{margin-bottom:40px}}
 @media(max-width:640px){h2,.about h2{font-size:36px;letter-spacing:-.72px}.about{padding-top:64px}.about-title{gap:20px;align-items:center}.about-title img{width:60px;height:auto}.about p{text-align:left;font-size:18px}.route-card{width:calc(100% - 40px);padding:20px;background-position:40% center}.route-card>div{padding:0;background:none}.route-card h2{font-size:36px}.route-card p{font-size:18px}.route-card{background-image:linear-gradient(#01162466,#01162499),url('/images/Second-Container.webp')}.photo-strip{height:400px;padding:48px 0}.photo-track>img{width:205px;height:310px}.separator{height:60px}.service-grid{gap:16px;grid-template-columns:1fr}.service{grid-column:auto;min-height:0}.service-cta{gap:24px}.service p{font-size:18px}.service h3{font-size:25px}.fleet-car{width:calc(100% - 100px);height:220px}.fleet-control{width:40px!important;height:44px!important;padding:10px!important}.fleet-stage{gap:10px}.fleet-caption h3{font-size:28px}.comparison-grid{grid-template-columns:1fr;margin-top:32px}.comparison-grid h3{min-height:88px;font-size:26px}.comparison-grid ul{margin-top:16px}.comparison-grid>div+div{margin-top:24px}.business-grid{gap:32px}.benefit-list article{padding:20px;align-items:flex-start}.benefit-list h3{font-size:22px}.mosaic{grid-template-columns:repeat(2,1fr)}.mosaic img{height:200px}.how-person{display:none}.steps{width:100%;padding:0}.steps li{gap:24px;margin-bottom:28px;padding-bottom:28px}.steps h3{font-size:28px}.step-number{font-size:60px}.footer h2{font-size:44px;letter-spacing:-.88px}.footer .button{width:100%}.footer .actions,.contact-pending{width:100%}}
 @media(min-width:1101px){.service-grid{display:flex;flex-wrap:wrap}.service-0,.service-2{width:calc((100% - 48px)*.286)}.service-1{width:calc((100% - 48px)*.428)}.service-3{width:calc((100% - 48px)*.41153)}.service-4{width:calc((100% - 48px)*.33333)}.service-cta{width:calc((100% - 48px)*.25514)}.service-0,.service-1,.service-2{min-height:290px}}
+
+/* Keep mobile gallery curves continuous instead of stretching raster separators. */
+@media(max-width:800px){
+  .photo-strip{padding:0;isolation:isolate}
+  .photo-strip .photo-track{height:100%}
+  .photo-strip .photo-track>img{height:100%;flex-shrink:0}
+  .photo-strip .separator{display:none}
+  .photo-strip::before,.photo-strip::after{
+    content:"";position:absolute;left:-10%;width:120%;height:100px;
+    border-radius:50%;background:#fff;z-index:1;pointer-events:none;
+  }
+  .photo-strip::before{top:-55px}
+  .photo-strip::after{bottom:-55px}
+}
