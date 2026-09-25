@@ -27,3 +27,20 @@
   .photo-strip::before{top:-55px}
   .photo-strip::after{bottom:-55px}
 }
+
+@media(max-width:800px){
+  .photo-strip .photo-track{
+    --gallery-photo-width:250px;
+    left:0;transform:none;width:100%;
+    overflow-x:auto;overflow-y:hidden;
+    padding-inline:calc((100% - var(--gallery-photo-width))/2);
+    scroll-snap-type:x mandatory;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+  .photo-strip .photo-track::-webkit-scrollbar{display:none}
+  .photo-strip .photo-track>img{width:var(--gallery-photo-width);scroll-snap-align:center}
+}
+@media(max-width:640px){
+  .photo-strip .photo-track{--gallery-photo-width:205px}
+}
