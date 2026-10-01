@@ -44,3 +44,6 @@
 @media(max-width:640px){
   .photo-strip .photo-track{--gallery-photo-width:205px}
 }
+
+/* Match the tighter Spin and BYD cutouts to the other fleet images. */
+.fleet-car-compact{transform:scale(.77)}
