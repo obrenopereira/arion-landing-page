@@ -24,7 +24,7 @@ const steps = [
 const cars = [
   ['Sedã / Corolla', 'Conforto e praticidade para deslocamentos individuais ou com poucos passageiros.', '/images/car-01.webp'],
   ['SUV / Corolla Cross', 'Conforto, segurança e uma experiência executiva.', '/images/corolla-cross-black.webp'],
-  ['SUV', 'Conforto, segurança e uma experiência executiva.', '/images/car-03.webp'],
+  ['7 lugares / Tiggo 8', 'Conforto, segurança e uma experiência executiva.', '/images/car-03.webp'],
   ['7 lugares / Chevrolet Spin', 'Uma opção versátil e espaçosa para grupos, famílias e deslocamentos com mais passageiros.', '/images/chevrolet-spin.webp'],
   ['SUV / BYD Song Pro', 'Mais conforto e tecnologia para passageiros, ideal para diferentes tipos de trajeto.', '/images/byd-song-pro.webp']
 ];
